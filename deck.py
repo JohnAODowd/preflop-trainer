@@ -18,7 +18,7 @@ class Card(object):
       rank: integer 1-13
     """
 
-    suit_names = ["Clubs", "Diamonds", "Hearts", "Spades"]
+    suit_names = ["c", "d", "h", "s"]
     rank_names = [None, "Ace", "2", "3", "4", "5", "6", "7", 
               "8", "9", "10", "Jack", "Queen", "King"]
 
@@ -28,8 +28,8 @@ class Card(object):
 
     def __str__(self):
         """Returns a human-readable string representation."""
-        return '%s of %s' % (Card.rank_names[self.rank],
-                             Card.suit_names[self.suit])
+        return '%s%s' % (Card.rank_names[self.rank],
+                        Card.suit_names[self.suit])
 
     def __cmp__(self, other):
         """Compares this card to other, first by suit, then rank.
