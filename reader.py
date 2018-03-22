@@ -2,14 +2,14 @@
 
 from random import choice, shuffle
 
-print("The Great Game")
+#print("The Great Game")
 
 path = "hand_orderings.txt"
 file = open(path, "r")
 
 def build(file):
     d = { }
-    for index, line in enumerate(file):
+    for index, line in enumerate(file, start = 1):
         perc = round(((index / 16432) * 100) + 1)
         if perc not in d:
             d[perc] = []
@@ -60,4 +60,4 @@ rankings = build(file)
 value = random_val(rankings)
 print("Percentage: %s" % value[0])
 print("Hand      : %s" % value[1])
-print("Images    : %s" % convert_to_png(format(value[1])))
+print("Images    : %s" % convert_to_png(format(value[1], jumble=True)))
