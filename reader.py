@@ -56,6 +56,8 @@ def convert_to_png(card_list):
 		card_list[index] = card + ".png"
 	return card_list
 
-str = random_val(build(file))[1]
-print(format(str))
-print(format(str, jumble=True))
+rankings = build(file)
+value = random_val(rankings)
+print("Percentage: %s" % value[0])
+print("Hand      : %s" % value[1])
+print("Images    : %s" % convert_to_png(format(value[1])))
