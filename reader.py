@@ -1,6 +1,6 @@
 from random import choice, shuffle
 
-str = '9876'
+str = 'T(98)7'
 
 def format(str, jumble=False):
 	suit_list = ['h', 'd', 'c', 's']
@@ -28,6 +28,10 @@ def format(str, jumble=False):
 		shuffle(out)
 
 	return out
+
+def jumble(card_list):
+	jumbled = shuffle(card_list)
+	return jumbled
 
 def convert_to_png(card_list):
 	for index, card in enumerate(card_list):
