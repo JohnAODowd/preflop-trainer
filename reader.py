@@ -5,7 +5,7 @@ from format import format, jumble
 
 #print("The Great Game")
 
-path = "omaha_hi_6_orderings.txt"
+path = "orderings/omaha_hi_6handed.txt"
 file = open(path, "r")
 
 def build(file):
@@ -32,7 +32,6 @@ def random_val(d):
         if d[k] == values:
             key = k
     return key, choice(values)
-
 
 def convert_to_png(card_list):
     for index, card in enumerate(card_list):
