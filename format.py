@@ -2,7 +2,7 @@ from random import choice, shuffle
 
 def format(str, jumble=False):
     suit_list = ['h', 'd', 'c', 's']
-    out = []
+    out = [ ]
     suited = False
     for char in str:
         if char == "(":
