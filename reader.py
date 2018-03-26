@@ -10,9 +10,10 @@ file = open(path, "r")
 
 def build(file):
     d = { }
-    #num_lines = file_len(file)
+    file.seek(0)
+    num_lines = file_len(file)
     for index, line in enumerate(file, start = 1):
-        perc = round(((index / 169) * 100) + 1)
+        perc = round(((index / num_lines) * 100) + 1)
         if perc not in d:
             d[perc] = []
         d[perc] += [line.strip()]
@@ -43,4 +44,4 @@ print(path)
 print("Percentage: %s" % value[0])
 print("Hand      : %s" % value[1])
 print("Images    : %s" % convert_to_png(format(value[1], jumble=True)))
-#print(file_len(file))
+print(file_len(file))
