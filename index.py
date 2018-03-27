@@ -15,8 +15,14 @@ print("""
             <title>PLO Trainer</title>
         </head>
         <body>
-            <p>
-                Hello, %s %s. You may go on your way.
+            <p> Hand      : %s </p>
+            <p> Percentage: %s </p>
+            <p>    """ % (reader.value[1],reader.value[0]))
+for image in reader.image_list:
+      print('<img src="png-cards/' + image + '" style="width:100%;max-width:100px" border-radius="25px">')
+print("""
             </p>
         </body>
-    </html>""" % ("h","h"))
+    </html> """)
+
+
