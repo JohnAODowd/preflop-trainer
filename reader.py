@@ -5,13 +5,13 @@ from format import format, jumble
 
 #print("The Great Game")
 
-path = "orderings/holdem_6handed.txt"
+path = "orderings/omaha_hi_6handed.txt"
 file = open(path, "r")
 
 def build(file):
     d = { }
-    file.seek(0)
     num_lines = file_len(file)
+    file.seek(0)
     for index, line in enumerate(file, start = 1):
         perc = round(((index / num_lines) * 100) + 1)
         if perc not in d:
@@ -40,8 +40,7 @@ def convert_to_png(card_list):
 
 rankings = build(file)
 value = random_val(rankings)
-print(path)
+
 print("Percentage: %s" % value[0])
 print("Hand      : %s" % value[1])
 print("Images    : %s" % convert_to_png(format(value[1], jumble=True)))
-print(file_len(file))
