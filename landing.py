@@ -1,7 +1,8 @@
 #!/usr/local/bin/python3
 
 import reader
-import jsscript
+import js
+import css
 
 print('Content-Type: text/html')
 print("")
@@ -16,18 +17,13 @@ print("""
             <title>PLO Trainer</title>
 			
 			<style>
-				#range_selection {
-					display: none;
-				}
-				
-				#display_selection {
-					display: none;
-				}
-				
+""")
+print(css.script)
+print("""
 			</style> 
 			<script>	
 """)
-print(jsscript.script)
+print(js.script)
 print("""
 			</script>
         </head>
