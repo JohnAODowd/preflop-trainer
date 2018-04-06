@@ -1,4 +1,5 @@
 script = """
+<script>
 (function(){
 				var variant_selection;
 				var range_selection;
@@ -67,4 +68,5 @@ script = """
 				}
 				
 			})();
+</script>
 """

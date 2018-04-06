@@ -15,16 +15,10 @@ print("""
             <meta charset="utf-8" />
             <title>PLO Trainer</title>
 			
-			<style>
 """)
 print(css.script)
-print("""
-			</style> 
-			<script>	
-""")
 print(js_landing.script)
 print("""
-			</script>
         </head>
         <body>
 			<div>

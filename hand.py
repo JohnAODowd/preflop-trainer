@@ -36,12 +36,8 @@ print("""
             <meta charset="utf-8" />
             <title>PLO Trainer</title>
 """)
-print("""
-			<script>	
-""")
 print(js_hand.script)
 print("""
-			</script>
         </head>
         <body>
 			<form id="display_selection">

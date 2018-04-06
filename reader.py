@@ -1,9 +1,4 @@
-# Right! Let's start.
-
 from random import choice, shuffle
-from format import format, jumble
-
-#print("The Great Game")
 
 def build(file):
     d = { }
