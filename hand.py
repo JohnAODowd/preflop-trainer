@@ -36,14 +36,17 @@ print("""
             <meta charset="utf-8" />
             <title>PLO Trainer</title>
 """)
+
 print(js_hand.script)
+
 print("""
         </head>
         <body>
-			<form id="display_selection">
+			<form id="hand_form">
 """)
+
 for image in image_list :
-        print('<img src="png-cards/' + image + '" style="width:100%;max-width:100px" border-radius="25px">')
+        print('             <img src="png-cards/' + image + '" style="width:100%;max-width:100px" border-radius="25px">')
 
 print("""
             
